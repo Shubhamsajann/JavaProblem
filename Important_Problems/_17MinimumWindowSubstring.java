@@ -4,9 +4,11 @@ import java.util.*;
 
 public class _17MinimumWindowSubstring {
 
-
-
-
+    public static void main(String[] args) {
+        String s = "ADOBECODEBANC";
+        String t = "ABC";
+        System.out.println(minWindow(s, t)); // Expected: "BANC"
+    }
 
     public static String minWindow(String s, String t) {
 
@@ -31,13 +33,6 @@ public class _17MinimumWindowSubstring {
         HashMap<Character, Integer> windowMap = new HashMap<>();
         return minLen == Integer.MAX_VALUE ? "" : s.substring(startIndex, startIndex + minLen);
 
-
-
     }
 
-    public static void main(String[] args) {
-        String s = "ADOBECODEBANC";
-        String t = "ABC";
-        System.out.println(minWindow(s, t)); // Expected: "BANC"
-    }
 }
